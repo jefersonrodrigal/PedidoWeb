@@ -11,7 +11,7 @@ Este projeto tem como objetivo desenvolver uma plataforma eficiente para o geren
 
 ## Etapas desenvolvidas
 
-- ✅ Criação do Backend
-- ✅ Criação do Frontend
-- ✅ Criação do projeto de testes unitarios 
-- ✅ Integração entre front e back por meio de desenvolvimento de politica de cors
+✅ Criação do Backend
+✅ Criação do Frontend
+✅ Criação do projeto de testes unitarios 
+✅ Integração entre front e back por meio de desenvolvimento de politica de cors
