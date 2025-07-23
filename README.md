@@ -1,4 +1,6 @@
-# PedidoWeb
+# PedidoWeb 
+
+![Status do Projeto](https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow?style=for-the-badge)
 
 Este projeto tem como objetivo desenvolver uma plataforma eficiente para o gerenciamento de pedidos, com integração direta a sistemas ERP (Enterprise Resource Planning). A aplicação permite aos usuários realizarem e acompanharem pedidos de forma rápida, enquanto mantém os dados sincronizados com o ERP da empresa.
 
