@@ -12,6 +12,8 @@ Este projeto tem como objetivo desenvolver uma plataforma eficiente para o geren
 ## Progresso do Desenvolvimento
 
 - ✅ Criação do Backend  
-- ✅ Criação do Frontend  
+- ✅ Criação do Frontend
+- ✅ Inclusão do react-router-dom no projeto e componentzição da navbar
+- ✅ Criacao da pagina Home
 - ✅ Criação do projeto de testes unitários  
 - ✅ Integração entre front e back por meio de desenvolvimento de política de CORS  
