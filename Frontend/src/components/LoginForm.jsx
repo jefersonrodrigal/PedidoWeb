@@ -1,8 +1,11 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 export default function LoginForm() {
   const [usuario, setUsuario] = useState('');
   const [senha, setSenha] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -16,11 +19,11 @@ export default function LoginForm() {
         body: JSON.stringify(payload),
       });
 
-      const data = await response.json();
+      // const data = await response.json();
 
       if (response.ok) {
-        console.log(data)
-        alert('Login autorizado');
+         navigate('/home');
+        
       } else {
         alert('Login inválido');
       }

@@ -1,14 +1,14 @@
-import './assets/login.css';
-import LeftSide from './components/LeftSide';
-import LoginForm from './components/LoginForm';
+import { Routes, Route } from 'react-router-dom';
+import LoginPage from './pages/LoginPageComponent';
+import HomePage from './pages/HomePageComponent';
 
 function App() {
-  return (
-    <div className="main-login">
-      <LeftSide />
-      <LoginForm />
-    </div>
-  );
+  return  (
+    <Routes>
+      <Route path="/" element={<LoginPage/>} />
+      <Route path="/home" element={<HomePage/>} />
+    </Routes>
+  )
 }
 
 export default App;
