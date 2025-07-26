@@ -1,46 +1,51 @@
+import { useState } from 'react';
 import '../assets/styles.css';
-import '../assets/paginas.css'
+import '../assets/paginas.css';
+import './SideBarCompoennt.css';
 
+const Sidebar = ({ isOpen }) => {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
-const Sidebar = () => {
+  const handleToggle = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
+
   return (
-    <div className="border-end corelementos" id="sidebar-wrapper">
-      <div className="sidebar-heading corelementos">
-        <a href="pedidos.html" style={{ textDecoration: 'none', color: 'inherit' }}>
-          <dt>Pedido.Net</dt>
-        </a>
-      </div>
-
-      <div className="list-group list-group-flush">
-        <a className="list-group-item list-group-item-action corelementos p-3" href="pedidos.html">
-          <i className="fas fa-list-alt text-gray-200"></i> Pedidos
-        </a>
-
-        <button className="dropdown-btn">
-          <i className="fas fa-shopping-cart text-gray-200"></i> Pedidos
-          <i className="fa fa-caret-down"></i>
-        </button>
-
-        <div className="dropdown-container">
-          <a href="#" id="pedido_itens">Pré-Pedido</a>
-          <a href="lancar_pedidos.html" id="pedido_itens">Lançar Pedido</a>
-          <a href="#" id="pedido_itens">Listar Pedidos</a>
+    <div className={`sidebar-wrapper ${isOpen ? 'open' : 'closed'} border-end corelementos`}>
+      <div className="border-end corelementos px-3" id="sidebar-wrapper">
+        <div className="sidebar-heading corelementos mt-3">
+          <a href="#!" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <dt>PedidoWeb</dt>
+          </a>
         </div>
 
-        <a className="list-group-item list-group-item-action corelementos p-3" href="clientes.html">
-          <i className="fas fa-address-book text-gray-200"></i> Clientes
-        </a>
+        <div className="list-group list-group-flush mt-3">
+          <a className="list-group-item list-group-item-action corelementos p-3" href="pedidos.html">
+            <i className="fas fa-list-alt text-gray-200 me-2"></i> Pedidos</a>
+          <button 
+            type="button"
+            className="list-group-item list-group-item-action corelementos d-flex justify-content-between align-items-center p-3 dropdown-btn"
+            onClick={handleToggle}>
+            <span>
+              <i className="fas fa-shopping-cart text-gray-200 me-2"></i> Pedidos
+            </span>
+              <i className={`fa fa-caret-down transition ${dropdownOpen ? '' : ''}`}></i>
+          </button>
 
-        <a className="list-group-item list-group-item-action corelementos p-3" href="#!">
-          <i className="fas fa-file-alt text-gray-200"></i> Relatório Comissões
-        </a>
+          {dropdownOpen && (
+            <div className="dropdown-container corelementos ms-4 mb-2">
+              <a href="#!" id="pedido_itens" className="dropdown-item">Lançar Pedido</a>
+              <a href="#!" id="pedido_itens" className="dropdown-item">Listar Pedidos</a>
+            </div>
+          )}
 
-        <div className="sidebar-card d-none d-lg-flex">
-          <img
-            className="sidebar-card-illustration mb-2"
-            src="imagens/Logo_HR_side.png"
-            alt="Logo da empresa"
-          />
+          <a className="list-group-item list-group-item-action corelementos p-3" href="#!">
+            <i className="fas fa-address-book text-gray-200 me-2"></i> Clientes
+          </a>
+
+          <a className="list-group-item list-group-item-action corelementos p-3" href="#!">
+            <i className="fas fa-file-alt text-gray-200 me-2"></i> Relatório Comissões
+          </a>
         </div>
       </div>
     </div>

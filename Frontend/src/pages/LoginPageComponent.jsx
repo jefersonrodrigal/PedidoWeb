@@ -3,7 +3,7 @@ import LoginForm from '../components/LoginForm';
 import '../assets/login.css';
 
 
-const LoginPage = () =>{
+const LoginPage = () => {
     return <div className="main-login">
       <LeftSide />
       <LoginForm />

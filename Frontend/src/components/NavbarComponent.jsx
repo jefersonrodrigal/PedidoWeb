@@ -1,12 +1,8 @@
-import '../assets/styles.css'
-import '../assets/paginas.css'
-import '@fortawesome/fontawesome-free/css/all.min.css';
-
-const Navbar = () => {
+const Navbar = ({ onToggleSidebar }) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light mb-4 shadow">
       <div className="container-fluid">
-        <button className="btn corelementos" id="sidebarToggle">
+        <button className="btn corelementos" onClick={onToggleSidebar}>
           <i className="fas fa-bars"></i>
         </button>
 
